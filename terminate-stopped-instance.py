@@ -9,10 +9,6 @@ for i in response['Reservations']:
         if 'State' in t and t['State']['Name'] == 'stopped':
             print("instance id is: {} and image id is: {} and instance type is: {}".format(t['InstanceId'],t['ImageId'],t['InstanceType']))
 
-        
-
-
-
-
-
-
+            client.terminate_instances(
+                InstanceIds=[t['InstanceId']]
+            )

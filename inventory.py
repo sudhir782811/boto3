@@ -12,9 +12,3 @@ for each in ec2_con_re.instances.all():
 
 	cnt+=1
 csv_ob.close()
-
-
-
-
-
-

@@ -5,9 +5,3 @@ ec2_con_re=aws_mag_con.resource(service_name="ec2",region_name="eu-central-1")
 f1={"Name": "tag:Name", "Values":['Docker']}
 for i in ec2_con_re.instances.filter(Filters=[f1]):
     i.start()
-
-
-
-
-
-
